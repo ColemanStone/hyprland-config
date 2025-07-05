@@ -1,0 +1,7 @@
+export HYPRLAND_NO_AQUA=1
+HYPRLAND_NO_AQUA=1
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    export HYPRLAND_NO_AQUA=1
+    exec Hyprland
+fi
